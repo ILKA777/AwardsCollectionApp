@@ -1,0 +1,43 @@
+//
+//  StarterView.swift
+//  AwardsCollectionApp
+//
+//  Created by Alexey Efimov on 17.06.2021.
+//
+
+import SwiftUI
+
+struct StarterView: View {
+    var body: some View {
+        TabView {
+            MainView()
+                .tabItem {
+                    Image(systemName: "rosette")
+                    Text("Main")
+                }
+            
+            CartRacingView()
+                .tabItem {
+                    Image(systemName: "cart.fill")
+                    Text("CartRacing")
+                }
+            
+            AwardsView()
+                .tabItem {
+                    Image(systemName: "pencil.and.outline")
+                    Text("Awards")
+                }
+            CustomFigureView(name: "nft")
+                .tabItem {
+                    Image(systemName: "sun.min.fill")
+                    Text("New figure")
+                }
+        }
+    }
+}
+
+struct StarterView_Previews: PreviewProvider {
+    static var previews: some View {
+        StarterView()
+    }
+}
